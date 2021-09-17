@@ -4,7 +4,7 @@
 ![sass](https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white&style=for-the-badge)
 ![eslint](https://img.shields.io/badge/eslint-eeeeee?style=for-the-badge&logo=eslint&logoColor=4b32c3)
 
-Live demo: 
+Live demo: https://nullsmegh.github.io/spacestagram/
 
 ### Usage
 
