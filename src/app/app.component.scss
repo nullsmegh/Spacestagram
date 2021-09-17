@@ -1,0 +1,44 @@
+@import '~src/shared/variables';
+
+.c-footer {
+
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	bottom: 0;
+	background-color: $theme-accent-color;
+	z-index: 999;
+	border-top: 3px solid $theme-primary-color;
+
+	&__heading {
+		margin: 1.135rem 0 0.75rem;
+		font-size: 2rem;
+		line-height: 1.25;
+		color: #1d1d1d;
+	}
+
+	&__sub-title {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+}
+
+.c-image-cards {
+	margin-top: 1rem;
+
+	&__list {
+		padding: 0 0;
+		list-style-type: none;
+	}
+}
+
+.c-image-cards__card {
+	
+	margin-bottom: 1rem;
+	display: block;
+	
+	&:last-of-type {
+		margin-bottom: 8.3125rem;
+	}
+}

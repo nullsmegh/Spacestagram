@@ -1,0 +1,20 @@
+<main role="main">
+    <div class="o-container">
+    	<section class="c-image-cards">
+	  		<ul class="c-image-cards__list">
+	  			<li class="c-image-cards__list-item">
+	        		<image-card *ngFor="let imageCard of imageCards" [cardData]="imageCard" [contentLoaded]="contentLoaded" class="	c-image-cards__card"></image-card>
+	        	</li>
+	    	</ul>
+    	</section>
+    </div>
+</main>
+
+<footer class="c-footer">
+  <div class="o-container">
+      <h1 class="c-footer__heading">Spacestagram</h1>
+      <h2 class="c-footer__sub-title">Brought to you by NASA's Astronomy Picture of the Day (APOD) API. <br>Apache License Version 2.0</h2>
+  </div>
+</footer>
+
+<router-outlet></router-outlet>

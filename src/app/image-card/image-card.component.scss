@@ -1,0 +1,115 @@
+@import '../../shared/variables';
+
+.c-image-card {
+
+	&__card {
+		
+		margin-bottom: 1rem;
+
+		&:last-of-type {
+			margin-bottom: 8.3125rem;
+		}
+
+	}
+
+	&__title {
+		font-size: 1.625rem;
+		margin-top: 1rem;
+		margin-bottom: 0rem;
+		color: #1d1d1d;
+	}
+
+	&__sub-title {
+		margin-top: 0.475rem;
+		margin-bottom: 0rem;
+	}
+
+	&__text {
+		margin-top: 1.125rem;
+	}
+
+	&__image-container {
+		position: relative;
+		margin: 0 0;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			padding-bottom: 84.99%; 
+		}
+	}
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-positon: center center;
+		top: 0;
+
+		&--loader {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+
+			::ng-deep svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__like { 
+	    position: relative;
+	    display: block;
+	    padding: 9px 1.125rem;
+	    border: solid 1px $theme-primary-color;
+	    overflow: hidden;
+	    font-size: 13px;
+	    font-family: "Crimson Text",sans-serif;
+	    color: $theme-primary-color;
+	    text-transform: uppercase;
+	    transition: 0.275s ease opacity, 0.275s 0.2s ease color;
+
+	    &::after {
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 200px;
+		    width: 120px;
+		    background-color: #1d1d1d;
+		    transform: translate(89px, -6px) rotate(45deg);
+		    transition: 0.3s ease-in-out width, 0.3s ease-in-out position;
+	    }
+
+	    &:hover {
+	    	color: #f0f0f0;
+	    	cursor: pointer;
+	    	z-index: 1;
+	    }
+
+	    &:hover::after {
+			left: 0;
+			width: 250px;
+			height: 220px;
+			z-index: -1;
+			transform: translate(-110px, -149px) rotate(45deg);
+	    }
+
+	    &--active {
+	    	background-color: #1d1d1d;
+	    	color: #f0f0f0;
+
+	    	&::after {
+	    		display: none;
+	    	}
+	    }
+	}
+
+	&__like-icon {
+		display:inline-block;
+		margin-right: 0.5rem;
+	}
+}

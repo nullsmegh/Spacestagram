@@ -1,0 +1,24 @@
+<div class="c-image-card">
+	<div class="c-image-card__inner">
+		<figure class="c-image-card__image-container">
+			<img src="{{ cardData.url }}" class="c-image-card__image" (load)="imageLoaded = true" alt="{{ cardData.title }}" />
+			<content-loader *ngIf="!contentLoaded || !imageLoaded" [backgroundColor]="'#f3f3f3'" [foregroundColor]="'#ecebeb'" viewBox="" class="c-image-card__image--loader">
+			  <svg:rect x="0" y="0" width="100%" height="100%" />
+			</content-loader>
+		</figure>
+		<article class="c-image-card__content" *ngIf="contentLoaded">
+			<h3 class="c-image-card__title">{{ cardData.title }}</h3>
+			<h4 class="c-image-card__sub-title">{{ cardData.date }}</h4>
+			<p class="c-image-card__text">{{ cardData.explanation }}</p>
+		</article>
+		<button *ngIf ="contentLoaded" class="c-image-card__like" [class.c-image-card__like--active]="liked" (click)="liked = !liked;"><i class="c-image-card__like-icon fas fa-heart"></i>Like</button>
+		<content-loader *ngIf="!contentLoaded" [backgroundColor]="'#f3f3f3'" [foregroundColor]="'#ecebeb'">
+		  <svg:rect x="0" y="0" width="100%" height="1rem" />
+		  <svg:rect x="0" y="2rem" width="6rem" height="1rem" />
+		  <svg:rect x="0" y="4rem" width="100%" height="1rem" />
+		  <svg:rect x="0" y="5rem" width="100%" height="1rem" />
+		  <svg:rect x="0" y="6rem" width="100%" height="1rem" />
+		  <svg:rect x="0" y="7rem" width="100%" height="1rem" />
+		</content-loader>
+	</div>
+</div>
